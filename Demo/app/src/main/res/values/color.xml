@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_logo">#E6FFF8</color>
+    <color name="background">#EDF4F3</color>
+    <color name="start_background_color_bottom">#FDFEFE</color>
+    <color name="end_background_color_top">#EDF4F3</color>
+    <color name="white">#fff</color>
+    <color name="black">#000</color>
+    <color name="gray_otp">#D8D8D8</color>
+    <color name="purple_200">#1D6BED</color>
+    <color name="red">#ff0000</color>
+
+    <color name="font_black">#333333</color>
+    <color name="font_grey">#999999</color>
+    <color name="font_grey_dark">#666666</color>
+    <color name="font_red">#FD6969</color>
+
+
+</resources>

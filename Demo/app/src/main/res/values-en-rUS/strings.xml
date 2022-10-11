@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ByteChat</string>
+    <string name="open_im">Welcome to OpenIM</string>
+    <string name="login">Login</string>
+    <string name="protocol">《Service Agreement", "Privacy Policy"</string>
+    <string name="input_phone">please enter the phone number</string>
+    <string name="phone_num">Mobile number</string>
+    <string name="mail">Mail</string>
+    <string name="input_password">please enter password</string>
+    <string name="forgot_password">Forgot password</string>
+    <string name="phone_register">Mobile number registration</string>
+    <string name="input_mail">please input your email</string>
+    <string name="mail_register">Email registration</string>
+    <string name="new_user">New user registration</string>
+    <string name="search">Search</string>
+    <string name="openim_call">OpenIM Phone</string>
+    <string name="disassociate">Unfriend</string>
+    <string name="detail">Details</string>
+    <string name="friend_verify">Friend Verification</string>
+    <string name="group_verify">Group chat verification</string>
+    <string name="verification_code_send_mail">Verification code has been sent to your email</string>
+    <string name="verification_code_send_phone">Verification code has been sent to your phone number</string>
+    <string name="input_verification_code">please enter verification code</string>
+    <string name="after">after</string>
+
+    <string name="name">Your name</string>
+    <string name="input_name">Please fill in your real name</string>
+    <string name="welcome">Welcome to OpenIM</string>
+    <string name="join_im">Enter OpenIM</string>
+
+    <string name="send_join_group_apply">Send group application</string>
+    <string name="address_book">address book</string>
+    <string name="bytechat">ByteChat</string>
+    <string name="u_registration_u"> Register</string>
+    <string name="forgot_password_u">Forgot password?</string>
+    <string name="resend_code"><u>Resend Verification code</u></string>
+
+</resources>

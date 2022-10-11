@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/curve_shape"
+    android:layout_marginStart="60dp"
+    android:layout_marginEnd="60dp"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingTop="20dp">
+
+        <ImageView
+            android:id="@+id/imageViewBell"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="15dp"
+            android:src="@drawable/ic_yellow_bell"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_heading"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/pingfang_sc_regular"
+            android:text="@string/new_version_found_heading"
+            android:textColor="#333333"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imageViewBell"
+            app:layout_constraintTop_toTopOf="@id/imageViewBell" />
+
+        <TextView
+            android:id="@+id/tv_subheading"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/pingfang_sc_regular"
+            android:paddingTop="5dp"
+            android:textColor="#666666"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tv_heading"
+            app:layout_constraintTop_toBottomOf="@id/tv_heading" />
+
+        <TextView
+            android:id="@+id/tv_heading_release"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/pingfang_sc_regular"
+            android:text="@string/release_notes_heading"
+            android:textColor="#333333"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/tv_heading"
+            app:layout_constraintTop_toBottomOf="@id/tv_subheading" />
+
+        <TextView
+            android:id="@+id/tv_release_notes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/pingfang_sc_regular"
+            android:textColor="#666666"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tv_heading"
+            app:layout_constraintTop_toBottomOf="@id/tv_heading_release" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/tv_ignore"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:fontFamily="@font/pingfang_sc_regular"
+            android:gravity="center"
+            android:text="@string/ignore"
+            android:textAllCaps="false"
+            android:textColor="#666666"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_later"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/pingfang_sc_regular"
+            android:gravity="center"
+            android:text="@string/later"
+            android:textAllCaps="false"
+            android:textColor="#666666"
+            android:background="@drawable/curve_shape_bottom_left_grey"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_immediately"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/pingfang_sc_regular"
+            android:gravity="center"
+            android:text="@string/immediately"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/curve_shape_top_right_blue"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

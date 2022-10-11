@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="VMProfile"
+            type="io.bytechat.demo.oldrelease.vm.ProfileViewModel" />
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.auth.SelectAvatarFragment">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_heading"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:cardElevation="15dp">
+
+            <RelativeLayout
+                android:id="@+id/rl_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="15dp"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_back_top_cut" />
+
+                <TextView
+                    android:id="@+id/tv_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/pingfang_sc_regular"
+                    android:text="Choose default photo"
+                    android:textColor="@color/font_black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_default_photo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cv_heading"
+            android:background="@mipmap/background_gradient"
+            android:paddingStart="15dp"
+            android:paddingTop="10dp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="4"
+            tools:itemCount="38"
+            tools:listitem="@layout/avatar_item" />
+
+    </RelativeLayout>
+</layout>

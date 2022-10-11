@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/bytechat_logo_bottom"
+        android:title="ByteChat" />
+
+    <item
+        android:id="@+id/navigation_address_book"
+        android:icon="@mipmap/ic_address_menu"
+        android:title="@string/contact_heading" />
+
+    <item
+        android:id="@+id/navigation_discover"
+        android:icon="@drawable/ic_discover2"
+        android:title="@string/discover_heading" />
+
+    <item
+        android:id="@+id/navigation_me"
+        android:icon="@mipmap/ic_me_menu"
+        android:title="@string/me" />
+
+</menu>

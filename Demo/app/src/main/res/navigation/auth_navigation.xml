@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/auth_navigation"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="io.bytechat.demo.ui.auth.RegistrationFragment"
+        android:label="fragment_registration"
+        tools:layout="@layout/fragment_registration" >
+
+        <action
+            android:id="@+id/action_registrationFragment_to_OTPFragment"
+            app:destination="@id/OTPFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="io.bytechat.demo.ui.auth.MainAuthFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+
+        <action
+            android:id="@+id/action_mainFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_forgetPasswordFragment"
+            app:destination="@id/forgetPasswordFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_registrationCaptchaFragment"
+            app:destination="@id/registrationCaptchaFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/OTPFragment"
+        android:name="io.bytechat.demo.ui.auth.OTPFragment"
+        android:label="fragment_o_t_p"
+        tools:layout="@layout/fragment_o_t_p" >
+
+        <action
+            android:id="@+id/action_OTPFragment_to_setPasswordFragment"
+            app:destination="@id/setPasswordFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/forgetPasswordFragment"
+        android:name="io.bytechat.demo.ui.auth.ForgetPasswordFragment"
+        android:label="fragment_forget_password"
+        tools:layout="@layout/fragment_forget_password" >
+
+        <action
+            android:id="@+id/action_forgetPasswordFragment_to_OTPFragment"
+            app:destination="@id/OTPFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/setPasswordFragment"
+        android:name="io.bytechat.demo.ui.auth.SetPasswordFragment"
+        android:label="fragment_set_password"
+        tools:layout="@layout/fragment_set_password" >
+
+        <action
+            android:id="@+id/action_setPasswordFragment_to_personalInfoFragment"
+            app:destination="@id/personalInfoFragment" />
+        <action
+            android:id="@+id/action_setPasswordFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/mainFragment"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/personalInfoFragment"
+        android:name="io.bytechat.demo.ui.auth.PersonalInfoFragment"
+        android:label="fragment_personal_info"
+        tools:layout="@layout/fragment_personal_info" >
+
+        <action
+            android:id="@+id/action_personalInfoFragment_to_bottomSheetFragment"
+            app:destination="@id/bottomSheetFragment" />
+        <action
+            android:id="@+id/action_personalInfoFragment_to_selectAvatarFragment"
+            app:destination="@id/selectAvatarFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/registrationCaptchaFragment"
+        android:name="io.bytechat.demo.ui.auth.RegistrationCaptchaFragment"
+        android:label="fragment_registration_captcha"
+        tools:layout="@layout/fragment_registration_captcha" >
+
+        <action
+            android:id="@+id/action_registrationCaptchaFragment_to_personalInfoFragment"
+            app:destination="@id/personalInfoFragment" />
+
+    </fragment>
+
+    <dialog
+        android:id="@+id/bottomSheetFragment"
+        android:name="io.bytechat.demo.ui.auth.BottomSheetAvatarFragment"
+        android:label="fragment_bottom_sheet"
+        tools:layout="@layout/fragment_bottom_sheet_avatar" >
+
+        <action
+            android:id="@+id/action_bottomSheetFragment_to_selectAvatarFragment2"
+            app:destination="@id/selectAvatarFragment" />
+
+    </dialog>
+
+    <fragment
+        android:id="@+id/selectAvatarFragment"
+        android:name="io.bytechat.demo.ui.auth.SelectAvatarFragment"
+        android:label="fragment_select_avatar"
+        tools:layout="@layout/fragment_select_avatar" />
+
+
+
+</navigation>

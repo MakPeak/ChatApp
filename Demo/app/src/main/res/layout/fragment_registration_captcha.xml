@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="loginViewModel"
+            type="io.bytechat.demo.vm.LoginViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/background_gradient"
+            tools:context=".ui.auth.RegistrationCaptchaFragment"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp">
+
+            <TextView
+                android:id="@+id/back_btn"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="32dp"
+                android:background="@mipmap/ic_back_arrow" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="64dp"
+                app:cardCornerRadius="20dp"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/splash_logo" />
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:id="@+id/ll_body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cv_logo"
+                android:layout_marginTop="35dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_phone_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/pingfang_sc_regular"
+                    android:text="@string/phone"
+                    android:textColor="#333333"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/search_text_background">
+
+                    <com.hbb20.CountryCodePicker
+                        android:id="@+id/countryCodePicker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        app:ccpDialog_showFlag="false"
+                        app:ccp_arrowColor="#898A8A"
+                        app:ccp_arrowSize="16dp"
+                        app:ccp_contentColor="#898A8A"
+                        app:ccp_defaultPhoneCode="86"
+                        app:ccp_showArrow="true"
+                        app:ccp_showFlag="false"
+                        app:ccp_showNameCode="false"
+                        app:ccp_textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/et_phone_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toEndOf="@+id/countryCodePicker"
+                        android:background="@null"
+                        android:ems="10"
+                        android:fontFamily="@font/pingfang_sc_regular"
+                        android:hint="@string/please_enter_valid_phone_number"
+                        android:inputType="numberDecimal"
+                        android:maxLength="13"
+                        android:textSize="14sp"
+                        app:ccp_defaultNameCode="CH"
+                        app:ccp_showNameCode="false" />
+                    <!--                        android:text="@={vm.phoneNumber}"-->
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_pass_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/pingfang_sc_regular"
+                    android:text="@string/password"
+                    android:textColor="#333333"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/search_text_background"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp">
+
+                    <com.scottyab.showhidepasswordedittext.ShowHidePasswordEditText
+                        android:id="@+id/shet_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/search_text_background"
+                        android:fontFamily="@font/pingfang_sc_regular"
+                        android:hint="@string/please_enter_your_password"
+                        android:inputType="textPassword"
+                        android:maxLength="22"
+                        android:text="@={loginViewModel.pwd}"
+                        android:textSize="14sp"
+                        app:drawable_hide="@mipmap/eye_opend"
+                        app:drawable_show="@mipmap/eye_closed" />
+
+                </RelativeLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_pass_validation"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    app:cardElevation="0dp"
+                    app:cardCornerRadius="12dp"
+                    android:layout_marginTop="2dp"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/ll_pass_validation"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:background="@drawable/search_text_background">
+
+                        <TextView
+                            android:id="@+id/tv_pass_validation_heading"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="8dp"
+                            android:fontFamily="@font/pingfang_sc_regular"
+                            android:text="@string/password_validation"
+                            android:textColor="#333333"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:background="#F4F4F4"
+                            android:paddingStart="20dp"
+                            android:paddingEnd="20dp"/>
+
+                        <LinearLayout
+                            android:id="@+id/ll_pass_validation_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingStart="20dp"
+                            android:paddingEnd="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="8dp">
+
+                            <ImageView
+                                android:id="@+id/iv_pass_validation_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_wrong"/>
+
+                            <TextView
+                                android:id="@+id/tv_pass_validation_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pingfang_sc_regular"
+                                android:text="@string/password_validation_1"
+                                android:textColor="#333333"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:layout_marginStart="5dp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_pass_validation_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingStart="20dp"
+                            android:paddingEnd="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="8dp">
+
+                            <ImageView
+                                android:id="@+id/iv_pass_validation_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_wrong"/>
+
+                            <TextView
+                                android:id="@+id/tv_pass_validation_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pingfang_sc_regular"
+                                android:text="@string/password_validation_2"
+                                android:textColor="#333333"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:layout_marginStart="5dp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_pass_validation_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingStart="20dp"
+                            android:paddingEnd="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="8dp">
+
+                            <ImageView
+                                android:id="@+id/iv_pass_validation_3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_wrong"/>
+
+                            <TextView
+                                android:id="@+id/tv_pass_validation_3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pingfang_sc_regular"
+                                android:text="@string/password_validation_3"
+                                android:textColor="#333333"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:layout_marginStart="5dp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tv_confirm_pass_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/pingfang_sc_regular"
+                    android:text="@string/confirm_password"
+                    android:textColor="#333333"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/search_text_background"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp">
+
+                    <com.scottyab.showhidepasswordedittext.ShowHidePasswordEditText
+                        android:id="@+id/shet_confirm_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/search_text_background"
+                        android:fontFamily="@font/pingfang_sc_regular"
+                        android:hint="@string/confirm_password_hint"
+                        android:inputType="textPassword"
+                        android:text="@={loginViewModel.pwd}"
+                        android:textSize="14sp"
+                        app:drawable_hide="@mipmap/eye_opend"
+                        app:drawable_show="@mipmap/eye_closed" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_invitation_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/pingfang_sc_regular"
+                    android:text="@string/invitation_code"
+                    android:textColor="#333333"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_invitation_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/search_text_background"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/et_invitation_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@null"
+                        android:ems="10"
+                        android:fontFamily="@font/pingfang_sc_regular"
+                        android:inputType="text"
+                        android:textSize="14sp"/>
+                    <!--                        android:text="@={vm.phoneNumber}"-->
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_captcha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/pingfang_sc_regular"
+                    android:text="@string/captcha"
+                    android:textColor="#333333"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="45dp"
+                        android:background="@drawable/search_text_background"
+                        android:layout_marginEnd="5dp">
+
+                        <EditText
+                            android:id="@+id/et_captcha"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:background="@null"
+                            android:ems="10"
+                            android:fontFamily="@font/pingfang_sc_regular"
+                            android:hint="@string/captcha_hint"
+                            android:inputType="text"
+                            android:maxLength="4"
+                            android:textSize="14sp"
+                            app:ccp_defaultNameCode="CH"
+                            app:ccp_showNameCode="false" />
+                        <!--                            android:text="@={vm.phoneNumber}"-->
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="45dp"
+                        android:background="@drawable/search_text_background"
+                        android:layout_marginStart="5dp">
+
+<!--                        <test.jinesh.captchaimageviewlib.CaptchaImageView-->
+<!--                            android:id="@+id/captcha"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:layout_toStartOf="@id/iv_refresh"-->
+<!--                            android:background="#ffffff" />-->
+
+                        <ImageView
+                            android:id="@+id/iv_captcha"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_toStartOf="@id/iv_refresh" />
+
+                        <ImageView
+                            android:id="@+id/iv_refresh"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_refresh"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentEnd="true"
+                            android:padding="5dp"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/response"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/pingfang_sc_regular"
+                    android:text=""
+                    android:textColor="#FA7C7B"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:gravity="center" />
+
+                <Button
+                    android:id="@+id/sign_up_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="50dp"
+                    android:background="@drawable/background_gradient_login_btn"
+                    android:elevation="4dp"
+                    android:fontFamily="@font/pingfang_sc_regular"
+                    android:text="@string/register"
+                    android:textAllCaps="false"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    app:backgroundTint="@null" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <CheckBox
+                        android:id="@+id/cb_agreement_pp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/cb_agree"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_agreement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/cb_agreement_pp"
+                        android:text="@string/cb_user_agreement"
+                        android:textColor="#00ACF2"/>
+
+                    <TextView
+                        android:id="@+id/tv_and"
+                        android:layout_toEndOf="@id/tv_agreement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cb_and"
+                        android:layout_centerVertical="true"
+                        android:textColor="#000000"/>
+
+                    <TextView
+                        android:id="@+id/tv_pp"
+                        android:layout_toEndOf="@id/tv_and"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cb_privacy_policy"
+                        android:layout_centerVertical="true"
+                        android:textColor="#00ACF2"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</layout>

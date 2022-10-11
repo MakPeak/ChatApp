@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="vm"
+            type="io.bytechat.demo.oldrelease.vm.ProfileViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/background_gradient"
+        tools:context=".ui.profile.MyIDCodeFragment">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_heading"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:cardElevation="10dp">
+
+            <RelativeLayout
+                android:id="@+id/rl_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tv_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/pingfang_sc_regular"
+                    android:text="@string/id_number"
+                    android:textColor="@color/font_black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="15dp"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_back_top_cut" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_body"
+            android:layout_width="330dp"
+            android:layout_height="220dp"
+            android:layout_below="@id/cv_heading"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="30dp">
+
+                <RelativeLayout
+                    android:id="@+id/rl_name_pic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <ImageView
+                        android:id="@+id/iv_user_pic"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:src="@mipmap/ic_avatar_1" />
+
+                    <TextView
+                        android:id="@+id/tv_user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@+id/iv_user_pic"
+                        android:fontFamily="@font/pingfang_sc_regular"
+                        android:lines="2"
+                        android:maxLength="20"
+                        android:text=""
+                        android:textColor="#333333"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_heading2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginEnd="50dp"
+                    android:fontFamily="@font/pingfang_sc_regular"
+                    android:text="@string/search_for_id_heading"
+                    android:textAlignment="center"
+                    android:textColor="#999999"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_id_number"
+                    android:layout_width="270dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    app:cardBackgroundColor="#ECF3F2"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_user_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/pingfang_sc_regular"
+                            android:text="0000000000"
+                            android:textColor="#333333"
+                            android:textSize="26dp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/iv_copy"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_marginStart="10dp"
+                            android:src="@mipmap/icon_copy" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/upload_from_album_btn"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".ui.auth.BottomSheetAvatarFragment">
+
+<!--    <TextView-->
+<!--        android:id="@+id/upload_gallary_tv"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:fontFamily="@font/pingfang_sc_regular"-->
+<!--        android:text="@string/upload_from_album"-->
+<!--        android:textStyle="bold"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:background="@drawable/upload_from_album_btn"-->
+<!--        android:textSize="18sp"-->
+<!--        android:gravity="center"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <TextView
+        android:id="@+id/tv_take_photo"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:fontFamily="@font/pingfang_sc_regular"
+        android:text="@string/take_photo"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:background="@drawable/upload_from_album_btn"
+        android:textSize="18sp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/tv_line1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_otp" />
+
+    <TextView
+        android:id="@+id/tv_choose_default_photo"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/pingfang_sc_regular"
+        android:text="@string/choose_default_photo"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_line2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_otp" />
+
+    <TextView
+        android:id="@+id/tv_choose_from_album"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:fontFamily="@font/pingfang_sc_regular"
+        android:text="@string/choose_from_album"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/tv_line3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_otp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_save_photo"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:fontFamily="@font/pingfang_sc_regular"
+        android:text="@string/save_photo"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_line4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_otp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_delete"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:fontFamily="@font/pingfang_sc_regular"
+        android:text="@string/delete_photo"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_line5"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_otp" />
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:fontFamily="@font/pingfang_sc_regular"
+        android:text="@string/cancel"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:gravity="center" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profile_navigation"
+    app:startDestination="@id/accountSettingsFragment">
+
+    <fragment
+        android:id="@+id/accountSettingsFragment"
+        android:name="io.bytechat.demo.ui.profile.AccountSettingsFragment"
+        android:label="fragment_account_settings"
+        tools:layout="@layout/fragment_account_settings" >
+
+        <action
+            android:id="@+id/action_accountSettingsFragment_to_accountLanguageSettingsFragment"
+            app:destination="@id/accountLanguageSettingsFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/accountLanguageSettingsFragment"
+        android:name="io.bytechat.demo.ui.profile.AccountLanguageSettingsFragment"
+        android:label="fragment_account_language_settings"
+        tools:layout="@layout/fragment_account_language_settings" >
+
+    </fragment>
+
+</navigation>

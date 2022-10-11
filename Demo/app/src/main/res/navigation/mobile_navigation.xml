@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="io.bytechat.demo.oldrelease.ui.main.ContactListFragment"
+        android:label="contact_list_fragment"
+        tools:layout="@layout/fragment_contact_list" />
+
+    <fragment
+        android:id="@+id/navigation_address_book"
+        android:name="io.openim.android.ouicontact.ui.ContactFragment"
+        android:label="contact_fragment"
+        tools:layout="@layout/fragment_contact" />
+
+    <fragment
+        android:id="@+id/navigation_discover"
+        android:name="io.bytechat.demo.oldrelease.ui.main.DiscoverFragment"
+        android:label="fragment_discover"
+        tools:layout="@layout/fragment_discover" />
+
+    <fragment
+        android:id="@+id/navigation_me"
+        android:name="io.bytechat.demo.oldrelease.ui.main.ProfileFragment"
+        android:label="contact_list_fragment"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_navigation_me_to_myQRCodeFragment"
+            app:destination="@id/myQRCodeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/myQRCodeFragment"
+        android:name="io.bytechat.demo.MyQRCodeFragment"
+        android:label="fragment_my_q_r_code"
+        tools:layout="@layout/fragment_my_q_r_code" />
+
+</navigation>

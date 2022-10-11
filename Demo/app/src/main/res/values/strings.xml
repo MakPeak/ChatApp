@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">ByteChat</string>
+    <string name="open_im">欢迎使用OpenIM</string>
+    <string name="protocol">《服务协议》，《隐私权政策》</string>
+    <string name="input_phone">请输入手机号码</string>
+    <string name="phone_num">手机号码</string>
+    <string name="mail">邮箱</string>
+    <string name="input_password">请输入密码</string>
+    <string name="forgot_password">忘记密码</string>
+    <string name="phone_register">手机号注册</string>
+    <string name="mail_register">邮箱注册</string>
+    <string name="input_mail">请输入邮箱</string>
+    <string name="new_user">新用户注册</string>
+
+    <string name="openim_call">OpenIM语音通话</string>
+    <string name="disassociate">解除好友关系</string>
+    <string name="detail">详情</string>
+    <string name="friend_verify">好友验证</string>
+    <string name="group_verify">群聊验证</string>
+    <string name="verification_code_send_mail">验证码已发送至邮箱</string>
+    <string name="verification_code_send_phone">验证码已发送至手机</string>
+    <string name="input_verification_code">请输入验证码</string>
+    <string name="after">后</string>
+    <string name="send_succ">发送成功</string>
+    <string name="name">你的姓名</string>
+    <string name="input_name">请填写真实姓名</string>
+    <string name="welcome">欢迎使用OpenIM</string>
+    <string name="join_im">进入OpenIM</string>
+
+    <string name="send_join_group_apply">发送入群申请</string>
+    <string name="address_book">通讯录</string>
+    <string name="bytechat">ByteChat</string>
+    <string name="u_registration_u"> Register  </string>
+    <string name="forgot_password_u"> Forgot password? </string>
+    <string name="resend_code"><u>Resend Verification code</u></string>
+    <string name="something_went_wrong">Something went Wrong</string>
+
+</resources>

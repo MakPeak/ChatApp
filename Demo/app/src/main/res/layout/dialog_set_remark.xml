@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="VMProfile"
+            type="io.bytechat.demo.oldrelease.vm.ProfileViewModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/add_friend_bg_bottom_section">
+
+            <LinearLayout
+                android:id="@+id/ll_remark_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tv_remark_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_toEndOf="@+id/iv_sign_out"
+                    android:fontFamily="@font/pingfang_sc_regular"
+                    android:text="@string/remark"
+                    android:textColor="@color/font_black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_remark_subheading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_toEndOf="@+id/iv_sign_out"
+                    android:fontFamily="@font/pingfang_sc_regular"
+                    android:textColor="@color/font_black"
+                    android:textSize="14sp"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone"/>
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_nickname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="24dp"
+                    android:background="@drawable/send_friend_request_text_background"
+                    android:fontFamily="@font/pingfang_sc_regular"
+                    android:paddingLeft="22dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="22dp"
+                    android:paddingBottom="10dp"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:maxLength="20"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_remark_bottom"
+                android:layout_below="@+id/ll_remark_top"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:layout_margin="5dp" >
+
+                <LinearLayout
+                    android:id="@+id/ll_remark_cancel"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_gradient_dialog_cancel_btn"
+                    android:layout_marginEnd="2.5dp" >
+
+                    <TextView
+                        android:id="@+id/tv_remark_cancel"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/pingfang_sc_regular"
+                        android:text="@string/signout_cancel"
+                        android:textColor="#999999"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textAllCaps="false"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_remark_ok"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_gradient_dialog_btn"
+                    android:layout_marginStart="2.5dp" >
+
+                    <TextView
+                        android:id="@+id/tv_remark_ok"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/pingfang_sc_regular"
+                        android:text="@string/yes"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textAllCaps="false"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

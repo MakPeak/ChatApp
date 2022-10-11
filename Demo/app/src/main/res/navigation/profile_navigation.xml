@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profile_navigation"
+    app:startDestination="@id/myInformationFragment">
+
+    <fragment
+        android:id="@+id/myInformationFragment"
+        android:name="io.bytechat.demo.ui.profile.MyInformationFragment"
+        android:label="fragment_my_information"
+        tools:layout="@layout/fragment_my_information" >
+
+        <action
+            android:id="@+id/action_myInformationFragment_to_profilePhotoFragment"
+            app:destination="@id/profilePhoto" />
+
+        <action
+            android:id="@+id/action_myInformationFragment_to_setNicknameFragment"
+            app:destination="@id/setNickname" />
+
+        <action
+            android:id="@+id/action_myInformationFragment_to_datePickerFragment"
+            app:destination="@id/datePickerFragment" />
+
+        <action
+            android:id="@+id/action_myInformationFragment_to_qrCodeFragment"
+            app:destination="@id/qrCodeFragment" />
+
+        <action
+            android:id="@+id/action_myInformationFragment_to_idCodeFragment"
+            app:destination="@id/idCodeFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/profilePhoto"
+        android:name="io.bytechat.demo.ui.profile.ProfilePhotoFragment"
+        android:label="fragment_profile_photo"
+        tools:layout="@layout/fragment_profile_photo" >
+
+        <action
+            android:id="@+id/action_profilePhotoFragment_to_bottomSheetFragment"
+            app:destination="@id/bottomSheetFragment" />
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/setNickname"
+        android:name="io.bytechat.demo.ui.profile.SetNicknameFragment"
+        android:label="fragment_set_nickname"
+        tools:layout="@layout/fragment_set_nickname" >
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/datePickerFragment"
+        android:name="io.bytechat.demo.ui.profile.DatePickerFragment"
+        android:label="fragment_date_picker"
+        tools:layout="@layout/fragment_date_picker" >
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/qrCodeFragment"
+        android:name="io.bytechat.demo.MyQRCodeFragment"
+        android:label="fragment_qr_code"
+        tools:layout="@layout/fragment_my_q_r_code" >
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/idCodeFragment"
+        android:name="io.bytechat.demo.ui.profile.MyIDCodeFragment"
+        android:label="fragment_id_code"
+        tools:layout="@layout/fragment_my_i_d_code" >
+
+    </fragment>
+
+    <dialog
+        android:id="@+id/bottomSheetFragment"
+        android:name="io.bytechat.demo.ui.auth.BottomSheetAvatarFragment"
+        android:label="fragment_bottom_sheet"
+        tools:layout="@layout/fragment_bottom_sheet_avatar" >
+
+        <action
+            android:id="@+id/action_bottomSheetFragment_to_selectAvatarFragment2"
+            app:destination="@id/selectAvatarFragment" />
+
+    </dialog>
+
+    <fragment
+        android:id="@+id/selectAvatarFragment"
+        android:name="io.bytechat.demo.ui.auth.SelectAvatarFragment"
+        android:label="fragment_select_avatar"
+        tools:layout="@layout/fragment_select_avatar" />
+
+</navigation>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="SearchVM"
+            type="io.bytechat.demo.oldrelease.vm.SearchVM" />
+
+        <import type="io.openim.android.ouicore.R" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/background_gradient"
+        tools:context=".oldrelease.ui.search.SearchConversActivity">
+
+        <LinearLayout
+            android:id="@+id/sink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <io.openim.android.ouicore.widget.SearchView
+                    android:id="@+id/searchView"
+                    android:layout_width="0dp"
+                    android:layout_height="41dp"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="7dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pingfang_sc_regular"
+                    android:paddingLeft="8dp"
+                    android:textStyle="bold"
+                    android:paddingTop="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="8dp"
+                    android:text="@string/cancel"
+                    android:textColor="#00acf2"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/notFind"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:gravity="center"
+                android:text="@{SearchVM.isPerson? R.string.not_find_user:R.string.not_find_group}"
+                android:textColor="#ff666666"
+                android:textSize="14sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>

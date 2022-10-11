@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".oldrelease.ui.search.SearchAllFragment"
+    android:background="@mipmap/background_gradient">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_no_results"
+            android:layout_width="120dp"
+            android:layout_height="95dp"
+            android:src="@drawable/img_no_results"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_no_results"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pingfang_sc_regular"
+            android:text="@string/no_result"
+            android:textColor="@color/font_grey"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/iv_no_results"
+            android:layout_centerInParent="true" />
+
+        <ScrollView
+            android:id="@+id/sv_body"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/ll_body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_contact_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pingfang_sc_regular"
+                    android:text="Contact(s) / Colleague(s)"
+                    android:textColor="@color/font_grey"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:padding="10dp"
+                    android:visibility="gone"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_search_contacts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/item_search_contacts" />
+
+                <TextView
+                    android:id="@+id/tv_group_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pingfang_sc_regular"
+                    android:text="Group(s)"
+                    android:textColor="@color/font_grey"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:padding="10dp"
+                    android:visibility="gone"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_search_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/item_search_group"/>
+
+                <TextView
+                    android:id="@+id/tv_chat_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pingfang_sc_regular"
+                    android:text="Chat Record(s)"
+                    android:textColor="@color/font_grey"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:padding="10dp"
+                    android:visibility="gone"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_search_chat_history"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/item_search_chat_history"/>
+
+                <TextView
+                    android:id="@+id/tv_file_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pingfang_sc_regular"
+                    android:text="File(s)"
+                    android:textColor="@color/font_grey"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:padding="10dp"
+                    android:visibility="gone"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_search_file"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:listitem="@layout/item_search_file" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</FrameLayout>
