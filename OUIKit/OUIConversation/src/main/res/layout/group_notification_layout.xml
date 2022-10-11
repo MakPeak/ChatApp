@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/date_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/arial"
+            android:text=""
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:gravity="center_horizontal|center_vertical"
+            android:textColor="@color/x_recycler_color_text_gray"
+            android:textSize="12sp"/>
+        <TextView
+            android:id="@+id/text_announcement_1_blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/arial"
+            android:maxLines="4"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:singleLine="false"
+            android:text=""
+            android:textColor="#00acf2"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/text_announcement_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/arial"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:text=""
+            android:textColor="#b4b4b4"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/text_announcement_3_blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/arial"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:text=""
+            android:textColor="#00acf2"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/text_announcement_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/arial"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:text=""
+            android:textColor="#b4b4b4"
+            android:textSize="12dp" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="group_notice">group notification</string>
+    <string name="pass">Apply by group</string>
+    <string name="Fail">Reject group application</string>
+</resources>

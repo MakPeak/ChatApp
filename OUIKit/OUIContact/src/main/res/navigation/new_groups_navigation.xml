@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/new_groups_navigation"
+    app:startDestination="@id/newGroupsRequestFragment">
+
+    <fragment
+        android:id="@+id/newGroupsRequestFragment"
+        android:name="io.openim.android.ouicontact.ui.newgroups.NewGroupsRequestFragment"
+        android:label="fragment_new_groups_request"
+        tools:layout="@layout/fragment_new_groups_request" >
+
+        <action
+            android:id="@+id/action_newGroupsRequestFragment_to_myGroupsFragment"
+            app:destination="@id/myGroupsFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/myGroupsFragment"
+        android:name="io.openim.android.ouicontact.ui.newgroups.MyGroupsFragment"
+        android:label="fragment_my_groups"
+        tools:layout="@layout/fragment_my_groups_joined" >
+
+        <action
+            android:id="@+id/action_myGroupsFragment_to_newGroupsRequestFragment"
+            app:destination="@id/newGroupsRequestFragment" />
+
+    </fragment>
+
+
+</navigation>

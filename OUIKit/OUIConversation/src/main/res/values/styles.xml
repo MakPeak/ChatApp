@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Input dialog theme. -->
+<resources>
+    <style name="PrivateChatSwitch" parent="Theme.AppCompat.Light">
+<!--         active thumb & track color (30% transparency) -->
+        <item name="colorControlActivated">@color/white</item>
+
+
+        <!-- inactive thumb color -->
+        <item name="colorSwitchThumbNormal">@color/white
+        </item>
+        <item name="fontFamily">
+            @font/pingfang_sc_regular
+        </item>
+        <item name="android:textStyle">
+            bold
+        </item>
+
+        <!-- inactive track color (30% transparency) -->
+        <item name="android:colorForeground">#707070
+        </item>
+    </style>
+
+    <style name="AppBottomSheetDialogTheme"
+        parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/upload_from_album_btn</item>
+    </style>
+</resources>
+

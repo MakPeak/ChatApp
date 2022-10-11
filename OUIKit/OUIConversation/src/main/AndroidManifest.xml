@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="io.openim.android.ouiconversation">
+
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="31"
+        tools:ignore="ScopedStorage" />
+
+    <application
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:theme="@style/Theme.Demo"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".ChateMediaPreviewActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name=".ui.GroupChatSettingsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.SelectNameCardActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.frowardmessage.ChatHistoryMergeMessagesActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.groupsettings.GroupMemberDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.groupsettings.GroupAnnouncementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.groupsettings.GroupQRCodeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.groupsettings.ModifyGroupActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.groupsettings.NickNameActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.ForwardMessageActivity"
+            android:exported="false"
+            android:label="@string/title_activity_forward_message"
+            android:theme="@style/Theme.Demo.NoActionBar" />
+        <activity
+            android:name=".ui.groupsettings.ViewChatHistoryActivity"
+            android:exported="false"
+            android:label="@string/title_activity_view_chat_history"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Demo.NoActionBar" />
+        <activity
+            android:name=".ui.PrivateChatSettingsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.groupsettings.ViewGroupMembersActivity"
+            android:exported="false"
+            android:label="@string/title_activity_view_group_members"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Demo.NoActionBar" />
+        <activity
+            android:name=".ui.PreviewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.PreviewConvAllMediaActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.ShootActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.ChatActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="io.openim.android.ouiconversation.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_path" />
+        </provider>
+    </application>
+
+</manifest>

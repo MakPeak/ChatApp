@@ -1,0 +1,18 @@
+<resources>
+
+    <style name="Theme.Demo.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Demo.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Demo.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="ThemeOverlay.SearchView" parent="">
+        <!-- Text color -->
+        <item name="android:editTextColor">#000000</item>
+        <!-- Hint text color -->
+<!--        <item name="android:textColorHint"></item>-->
+    </style>
+</resources>

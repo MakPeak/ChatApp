@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/new_friends_navigation"
+    app:startDestination="@id/newFriendsRequestFragment">
+
+    <fragment
+        android:id="@+id/newFriendsRequestFragment"
+        android:name="io.openim.android.ouicontact.ui.newfriends.NewFriendsRequestFragment"
+        android:label="fragment_new_friends_request"
+        tools:layout="@layout/fragment_new_friends_request" >
+
+        <action
+            android:id="@+id/action_newFriendsRequestFragment_to_myFriendsFragment"
+            app:destination="@id/myFriendsFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/myFriendsFragment"
+        android:name="io.openim.android.ouicontact.ui.newfriends.MyFriendsFragment"
+        android:label="fragment_my_friends"
+        tools:layout="@layout/fragment_my_friends" >
+
+        <action
+            android:id="@+id/action_myFriendsFragment_to_newFriendsRequestFragment"
+            app:destination="@id/newFriendsRequestFragment" />
+
+    </fragment>
+
+
+</navigation>

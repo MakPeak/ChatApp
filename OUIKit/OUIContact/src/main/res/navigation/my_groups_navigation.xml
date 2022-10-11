@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_groups_navigation"
+    app:startDestination="@id/userCreatedGroupsFragment">
+
+    <fragment
+        android:id="@+id/userCreatedGroupsFragment"
+        android:name="io.openim.android.ouicontact.ui.mygroups.UserCreatedGroupsFragment"
+        android:label="fragment_user_created_groups"
+        tools:layout="@layout/fragment_user_created_groups" >
+
+        <action
+            android:id="@+id/action_userCreatedGroupsFragment_to_userJoinedGroupsFragment"
+            app:destination="@id/userJoinedGroupsFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/userJoinedGroupsFragment"
+        android:name="io.openim.android.ouicontact.ui.mygroups.UserJoinedGroupsFragment"
+        android:label="fragment_user_joined_groups"
+        tools:layout="@layout/fragment_user_joined_groups" >
+
+        <action
+            android:id="@+id/action_userJoinedGroupsFragment_to_userCreatedGroupsFragment"
+            app:destination="@id/userCreatedGroupsFragment" />
+
+    </fragment>
+
+</navigation>

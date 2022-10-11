@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="apply_join">Apply to join the group</string>
+    <string name="group_id">Group ID number</string>
+
+</resources>

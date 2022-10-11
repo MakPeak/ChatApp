@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout >
+    <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.ForwardMessageActivity">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/Theme.Demo.AppBarOverlay">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingLeft="22dp"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingRight="22dp"
+                android:paddingBottom="10dp">
+
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/search_view_forward_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:clickable="true"
+                    android:layout_weight="1"
+                    android:hint="@string/search_by_id"
+                    android:theme="@style/ThemeOverlay.SearchView"
+                    app:iconifiedByDefault="false"
+                    app:queryBackground="@android:color/transparent"
+                    app:queryHint="@string/search"
+                    app:searchIcon="@drawable/ic_baseline_search" />
+
+                <TextView
+                    android:id="@+id/done"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Done"
+                    android:textColor="#666666"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/arial"
+                    android:layout_gravity="center"
+                    android:layout_margin="8dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabs"
+                android:paddingStart="8dp"
+                app:tabIndicatorColor="#00ACF2"
+                app:tabMode="scrollable"
+                app:tabSelectedTextColor="#00ACF2"
+                app:tabTextColor="#999999"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

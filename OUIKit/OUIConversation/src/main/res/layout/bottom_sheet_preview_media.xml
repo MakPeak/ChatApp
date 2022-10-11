@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context=".ui.BottomSheetPreviewMedia">
+
+    <TextView
+        android:id="@+id/tv_save_to_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:fontFamily="@font/pingfang_sc_regular"
+        android:text="@string/save_to_gallery"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:gravity="center" />
+
+    <View
+        android:id="@+id/tv_line1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/dark_gray" />
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/pingfang_sc_regular"
+        android:text="@string/cancel"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:textSize="18sp" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/rl_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+
+
+            <io.openim.android.ouicore.widget.AvatarImage
+                android:id="@+id/iv_user"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:padding="4dp"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="@drawable/background_gradient_user_chat_btn"
+                android:src="@mipmap/icon_add_group"
+                />
+
+
+        <TextView
+            android:id="@+id/tv_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/iv_user"
+            android:fontFamily="@font/pingfang_sc_regular"
+            android:text="boy"
+            android:textColor="#333333"
+            android:textSize="14sp"
+            android:layout_weight="1"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="2"
+            android:gravity="center_vertical">
+
+            <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+                android:id="@+id/send"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/background_gradient_user_group_image_icon"
+                android:fontFamily="@font/arial"
+                android:padding="0dp"
+                android:text="Send"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                android:textSize="12sp"
+                app:backgroundTint="@null"
+                app:initialCornerAngle="16dp"
+                app:spinning_bar_color="#FFF"
+                app:spinning_bar_padding="6dp"
+                app:spinning_bar_width="4dp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/v_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#D8D8D8"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

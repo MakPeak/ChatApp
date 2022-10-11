@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/background_login_btn">
+    <corners android:radius="20dp" />
+    <solid android:color="@color/background_logo" />
+    <gradient
+        android:angle="90"
+        android:endColor="#25e5af"
+        android:startColor="#12aae8"
+        android:type="linear"/>
+</shape>

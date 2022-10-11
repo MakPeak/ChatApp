@@ -1,0 +1,28 @@
+<resources>
+    <string name="remove">移除</string>
+    <string name="top">置顶</string>
+    <string name="typing">正在输入…</string>
+    <string name="unsupported_type">暂不支持的消息类型</string>
+    <string name="touch_say">按住说话</string>
+    <string name="let_go">松开取消</string>
+    <string name="let_send">松手发送</string>
+    <string name="speech_to_txt">转文字</string>
+    <string name="title_activity_view_chat_history">ViewChatHistoryActivity</string>
+    <string name="title_activity_view_group_members">ViewGroupMembersActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_forward_message">ForwardMessageActivity</string>
+
+    <!-- Group chat Announcement Messages - Notifications -->
+    <string name="group_name_change">%1$s have changed group name to %2$s</string>
+    <string name="left_group">%1$s left the group</string>
+    <string name="changed_to_be_owner">%1$s changed to be the new owner</string>
+    <string name="to_be_banned">%1$s to be banned</string>
+    <string name="been_moved">%1$s been removed</string>
+    <string name="join_into_group">%1$s been joined into the group</string>
+    <string name="turned_on_bans">%1$s turned on all bans</string>
+    <string name="turned_off_bans">%1$s turned off all bans</string>
+    <string name="is_new_owner">\" is new owner\"</string>
+</resources>

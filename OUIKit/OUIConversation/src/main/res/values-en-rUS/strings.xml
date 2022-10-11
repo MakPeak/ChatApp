@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="remove">Remove</string>
+    <string name="top">Top</string>
+    <string name="typing">Typing</string>
+    <string name="unsupported_type">Unsupported message types</string>
+    <string name="touch_say">hold to speak</string>
+    <string name="let_go">release to cancel</string>
+    <string name="speech_to_txt">Convert text</string>
+    <string name="let_send">Let send</string>
+</resources>

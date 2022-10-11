@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="GroupVM"
+            type="io.openim.android.ouigroup.vm.GroupVM" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        tools:context=".ui.CreateGroupActivity"
+        android:background="@mipmap/background_gradient"
+        android:layout_height="match_parent">
+
+        <io.openim.android.ouicore.widget.AvatarImage
+            android:id="@+id/avatarImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="64dp"
+            android:background="@drawable/background_gradient_confirm_btn"
+            android:padding="20dp"
+            android:src="@mipmap/icon_group"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/upload_img_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="#999999"
+            android:fontFamily="@font/pingfang_sc_regular"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:text="@string/click_to_upload"
+            app:layout_constraintEnd_toEndOf="@+id/avatarImage"
+            app:layout_constraintStart_toStartOf="@+id/avatarImage"
+            app:layout_constraintTop_toBottomOf="@+id/avatarImage" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="48dp"
+            android:text="@string/group_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/upload_img_text" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textContainer1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/send_friend_request_text_background"
+            android:elevation="8dp"
+            app:boxBackgroundMode="none"
+            app:hintEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/groupName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={GroupVM.groupName}"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/pingfang_sc_regular"
+                android:minHeight="48dp"
+                android:paddingLeft="22dp"
+                android:hint="@string/please_enter_group_name"
+                android:paddingTop="14dp"
+                android:paddingRight="22dp"
+                android:textStyle="bold"
+                android:maxLength="20"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/send_friend_request_text_background"
+            android:elevation="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/textContainer1"
+            app:layout_constraintStart_toStartOf="@+id/textContainer1"
+            app:layout_constraintTop_toBottomOf="@+id/textContainer1">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintEnabled="false"
+                android:background="@drawable/send_friend_request_text_background"
+                app:boxBackgroundMode="none"
+                app:counterEnabled="true"
+                app:counterMaxLength="50"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/group_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/pingfang_sc_regular"
+                    android:gravity="top"
+                    android:maxLength="50"
+                    android:singleLine="true"
+                    android:text="@={GroupVM.groupDisc}"
+                    android:hint="@string/please_enter_group_description"
+                    android:minHeight="110dp"
+                    android:paddingLeft="22dp"
+                    android:paddingTop="14dp"
+                    android:paddingRight="22dp"
+                    android:textStyle="bold" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/background_gradient_save_btn"
+            android:elevation="4dp"
+            android:fontFamily="@font/pingfang_sc_regular"
+            android:text="@string/save"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:backgroundTint="@null"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
+

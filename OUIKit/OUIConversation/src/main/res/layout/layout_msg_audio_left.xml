@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="MissingDefaultResource"
+    android:layout_marginRight="20dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <io.openim.android.ouiconversation.widget.SendStateView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sendState"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/content" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="7dp"
+            android:layout_toRightOf="@id/avatar"
+            android:background="@drawable/sty_radius_unleft_30"
+            android:gravity="center_vertical"
+            android:padding="7dp"
+            android:textColor="#ff333333"
+            android:textSize="14sp">
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottieView"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:lottie_fileName="voice_blue.json"
+                app:lottie_loop="true"
+                app:lottie_progress="1"
+                app:lottie_speed="1.3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <TextView
+                android:id="@+id/duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="3dp"
+                android:text="1``"
+                android:textColor="#ff333333"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@id/lottieView"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="13:30"
+                android:textSize="10sp"
+                android:textColor="#b4b4b4"
+                app:layout_constraintStart_toEndOf="@id/duration"
+                app:layout_constraintTop_toBottomOf="@id/duration"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <io.openim.android.ouicore.widget.AvatarImage
+            android:id="@+id/avatar"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_toRightOf="@id/select_layout"
+            android:src="@mipmap/ic_my_friend" />
+
+        <include
+            layout="@layout/check_box_layout"
+            android:id="@+id/select_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:visibility="visible"/>
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="MissingDefaultResource"
+    android:layout_marginLeft="20dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal">
+
+        <io.openim.android.ouiconversation.widget.SendStateView
+            android:id="@+id/sendState2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@id/content2" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/content2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="7dp"
+            android:layout_toLeftOf="@id/avatar2"
+            android:background="@drawable/sty_radius_unright_30"
+            android:gravity="center_vertical"
+            android:minHeight="40dp"
+            android:paddingLeft="7dp"
+            android:paddingTop="5dp"
+            android:textColor="#ff333333"
+            android:textSize="14sp">
+
+            <TextView
+                android:id="@+id/tv_time_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/arial"
+                android:padding="5dp"
+                android:textColor="#b4b4b4"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottieView2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:rotation="180"
+                app:layout_constraintBottom_toTopOf="@id/tv_time_2"
+                app:layout_constraintRight_toLeftOf="@id/tv_time_2"
+                app:lottie_fileName="voice_blue.json"
+                app:lottie_loop="true"
+                app:lottie_progress="1"
+                app:lottie_speed="1.3" />
+
+            <TextView
+                android:id="@+id/duration2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="1``"
+                android:textColor="#ff333333"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@id/tv_time_2"
+                app:layout_constraintEnd_toStartOf="@+id/lottieView2"
+                app:layout_constraintRight_toLeftOf="@id/lottieView2"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <io.openim.android.ouicore.widget.AvatarImage
+            android:id="@+id/avatar2"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:src="@mipmap/ic_my_friend"
+            android:layout_toLeftOf="@id/select_layout"/>
+        <include
+            android:id="@+id/select_layout"
+            layout="@layout/check_box_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+</FrameLayout>
